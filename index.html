@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数据可视化</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <!-- 头部 -->
+    <header>
+      <h1>网络侧自适应控制调优</h1>
+      <div class="show-time"></div>
+      <script>
+        var t = null;
+        t = setTimeout(time, 1000); //开始运行
+        function time() {
+          clearTimeout(t); //清除定时器
+          dt = new Date();
+          var y = dt.getFullYear();
+          var mt = dt.getMonth() + 1;
+          var day = dt.getDate();
+          var h = dt.getHours(); //获取时
+          var m = dt.getMinutes(); //获取分
+          var s = dt.getSeconds(); //获取秒
+          document.querySelector(".show-time").innerHTML =
+            "当前时间：" +
+            y +
+            "年" +
+            mt +
+            "月" +
+            day +
+            "日-" +
+            h +
+            "时" +
+            m +
+            "分" +
+            s +
+            "秒";
+          t = setTimeout(time, 1000); //设定定时器，循环运行
+        }
+      </script>
+    </header>
+
+    <!-- 页面主体 -->
+
+    <section class="topbox">
+      <div class="row">
+        <h1>短期流量预测</h1>
+        <div class="fourcharts">
+          <div class="fourcharts-column">
+            <div class="panel pre1">
+              <h2>OD1</h2>
+              <div class="chart"></div>
+
+              <div class="panel-footer"></div>
+            </div>
+            <div class="panel pre2">
+              <h2>OD2</h2>
+              <div class="chart"></div>
+
+              <div class="panel-footer"></div>
+            </div>
+          </div>
+          <div class="fourcharts-column">
+            <div class="panel pre3">
+              <h2>OD3</h2>
+              <div class="chart"></div>
+
+              <div class="panel-footer"></div>
+            </div>
+            <div class="panel pre4">
+              <h2>OD4</h2>
+              <div class="chart"></div>
+
+              <div class="panel-footer"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <h1>背景流量对比</h1>
+        <div class="twobar">
+          <div class="panel com1">
+            <!-- 图表放置盒子 -->
+            <h2>最大链路利用率图</h2>
+            <div class="chart"></div>
+            <!-- 伪元素绘制盒子下边角 -->
+            <div class="panel-footer"></div>
+          </div>
+          <div class="panel com2">
+            <h2>最大时延图</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="botbox">
+      <h1>网络调优</h1>
+      <div class="buttonbox">
+
+        <button class="ant-btn ant-btn-red" onclick="c1(),c2(),c3(),c4()">拓扑</button>
+        <button class="ant-btn ant-btn-red" >路由及分流比</button>
+        <button class="ant-btn ant-btn-red" >最大链路利用率</button>
+        <button class="ant-btn ant-btn-red" onclick="shiyan()">时延</button>
+
+      </div>
+      <div class="fourgraph">
+        <div class="panel op1">
+          <!-- <h2>拓扑图</h2> -->
+          <div class="chart"></div>
+
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel op2">
+          <!-- <h2>OD1拓扑</h2> -->
+          <div class="chart"></div>
+
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel op3">
+          <!-- <h2>OD2拓扑</h2> -->
+          <div class="chart"></div>
+
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel op4">
+          <!-- <h2>OD3拓扑</h2> -->
+          <div class="chart"></div>
+
+          <div class="panel-footer"></div>
+        </div>
+        
+
+
+      </div> 
+
+    </section>
+
+
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <!-- 引入china.js 完成地图模块 -->
+    <script src="js/china.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
