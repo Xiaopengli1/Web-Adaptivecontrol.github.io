@@ -18,6 +18,6 @@
 ## 项目展示
 - 展示地址：https://xiaopengli1.github.io/Web-Adaptivecontrol.github.io/
 
-![echarts.png](https://z4a.net/images/2020/06/29/echarts.png)
+![echarts.png](https://github.com/Xiaopengli1/Web-Adaptivecontrol.github.io/blob/main/images/show.png)
 
 
