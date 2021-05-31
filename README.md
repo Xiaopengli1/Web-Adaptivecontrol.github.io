@@ -12,6 +12,7 @@
 - 原生js + jquery 使用
 - rem适配
 - echarts
+- Http-server
 
 
 
@@ -19,5 +20,4 @@
 - 展示地址：https://xiaopengli1.github.io/Web-Adaptivecontrol.github.io/
 
 ![echarts.png](https://github.com/Xiaopengli1/Web-Adaptivecontrol.github.io/blob/main/images/show.png)
-
 
